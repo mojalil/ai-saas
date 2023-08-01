@@ -49,6 +49,7 @@ const ConversationPage = () => {
       console.log(error);
       //   Todo: Open pro modal
     } finally {
+      // Frefreshes all the server components
       router.refresh();
     }
   };
