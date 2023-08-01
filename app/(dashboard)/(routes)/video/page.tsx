@@ -14,8 +14,10 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import Empty from "@/components/Empty";
 import Loader from "@/components/Loader";
+import { useProModal } from "@/hooks/use-pro-modal";
 
 const VideoPage = () => {
+  const proModal = useProModal();
   const [video, setVideo] = useState<string>();
   const router = useRouter();
   const form = useForm<z.infer<typeof formSchema>>({
@@ -35,9 +37,12 @@ const VideoPage = () => {
       setVideo(response.data[0]);
 
       form.reset();
-    } catch (error) {
+    } catch (error: any) {
       console.log(error);
-      //   Todo: Open pro modal
+      // if error is 403 open promodal
+      if (error?.response?.status === 403) {
+        proModal.onOpen();
+      }
     } finally {
       router.refresh();
     }

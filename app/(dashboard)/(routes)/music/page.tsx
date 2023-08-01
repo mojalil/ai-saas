@@ -15,8 +15,10 @@ import { ChatCompletionRequestMessage } from "openai";
 import { useState } from "react";
 import Empty from "@/components/Empty";
 import Loader from "@/components/Loader";
+import { useProModal } from "@/hooks/use-pro-modal";
 
 const MusicPage = () => {
+  const proModal = useProModal();
   const [music, setMusic] = useState<string>();
   const router = useRouter();
   const form = useForm<z.infer<typeof formSchema>>({
@@ -36,9 +38,12 @@ const MusicPage = () => {
       setMusic(response.data.audio);
 
       form.reset();
-    } catch (error) {
+    } catch (error: any) {
       console.log(error);
-      //   Todo: Open pro modal
+      // if error is 403 open promodal
+      if (error?.response?.status === 403) {
+        proModal.onOpen();
+      }
     } finally {
       router.refresh();
     }
