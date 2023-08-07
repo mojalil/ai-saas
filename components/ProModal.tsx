@@ -17,6 +17,7 @@ import { Card } from "./ui/card";
 import { cn } from "@/lib/utils";
 import axios from "axios";
 import { useState } from "react";
+import { toast } from "react-hot-toast";
 
 const tools = [
     {
@@ -66,7 +67,8 @@ const ProModal = () => {
             const response = await  axios.get("/api/stripe");
             window.location.href = response.data.url;
         } catch (error) {
-            console.log(error, "STRIPE_CLIENT_ERROR");
+            toast.error("Something went wrong. Contact support.");
+            console.log("STRIPE_CLIENT_ERROR", error);
         } finally {
             setLoading(false);
         }
