@@ -3,6 +3,7 @@ import { NextResponse } from "next/server";
 import Replicate from "replicate";
 
 import { increaseApiLimit, checkApiLimit } from "@/lib/api-limit";
+import { checkSubscription } from "@/lib/subscription";
 
 
 const replicate = new Replicate({
@@ -24,6 +25,12 @@ export async function POST(req: Request) {
     }
 
     const freeTrail = await checkApiLimit();
+    const isPro = await checkSubscription();
+
+    if (!freeTrail && !isPro) {
+      return new NextResponse("Free trail limit reached", { status: 403 });
+    }
+
 
     if (!freeTrail) {
       return new NextResponse("Free trail limit reached", { status: 403 });
@@ -39,7 +46,9 @@ export async function POST(req: Request) {
       }
     );
 
-    await increaseApiLimit();
+    if (!isPro) {
+      await increaseApiLimit();
+    }
 
 
     return NextResponse.json(response);
