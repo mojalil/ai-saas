@@ -21,6 +21,7 @@ import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useProModal } from "@/hooks/use-pro-modal";
+import toast from "react-hot-toast";
 
 const CodePage = () => {
   const proModal = useProModal();
@@ -54,6 +55,8 @@ const CodePage = () => {
       // if error is 403 open promodal
       if (error?.response?.status === 403) {
         proModal.onOpen();
+      } else {
+        toast.error("Something went wrong. Contact support.");
       }
     } finally {
       router.refresh();
