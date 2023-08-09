@@ -1,40 +1,69 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1>
+  <img src="https://github.com/mojalil/trifusion-ai/assets/10572843/ae488788-241b-4dab-9a3f-a353f23180cd" alt="Trifusion AI Banner" width="40" align="left"/>
+  Trifusion AI
+</h1>
+
+</br>
+
+Trifusion AI is a state-of-the-art solution that uses artificial intelligence to generate content like photos, videos, music, art, code, and text. It enables creators, developers, and artists to produce content at an unparalleled speed.
+
+## Features
+
+- **Content Generation**: Easily create photos, videos, music, art, code, and text.
+- **User Authentication**: Secure user authentication using [@clerk/nextjs](https://www.npmjs.com/package/@clerk/nextjs).
+- **Intuitive UI**: A modern and responsive user interface.
+- **No Credit Card Required**: Start generating for free.
 
 ## Getting Started
 
-First, run the development server:
+Clone the repository and install the dependencies:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+```
+git clone https://github.com/your-username/trifusion-ai.git
+cd trifusion-ai
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then, you can run the project in development mode:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Or build the project for production:
 
-## Learn More
+```
+npm run build
+npm start
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Dependencies
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Trifusion AI leverages several libraries and frameworks:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- [Next.js](https://nextjs.org/)
+- [React](https://reactjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Prisma](https://www.prisma.io/)
+- [Stripe](https://stripe.com/)
+- ... and many more. See `package.json` for a full list.
 
-## Deploy on Vercel
+## Contributing
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+We welcome contributions! Please see our [CONTRIBUTING.md](link-to-contributing-file) for details on how to contribute.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## License
 
-## Database
+Trifusion AI is licensed under the MIT License. See [LICENSE.md](link-to-license-file) for more information.
 
-1. Making changes to the schema ? Run `npx prisma db push` followed by `npx prisma generate`
-2. Check the database with the webui, run `npx prisma studio`
-3. To reset your database you can use `npx prisma migrate database`, `npx prisma generate` , `npx prisma db push`
+## Support
+
+Need help? Feel free to [open an issue](https://github.com/mojalil/trifusion-ai/issues) or contact our support team at [support@trifusion.ai](mailto:support@trifusion.ai).
+
+## Author
+
+Created and maintained by [motypes](https://twitter.com/motypes) and [Trifusion AI Team](link-to-team-profile).
+
+## Acknowledgments
+
+Special thanks to our community and everyone who contributed to making Trifusion AI a reality.
