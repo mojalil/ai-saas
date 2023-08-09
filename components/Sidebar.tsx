@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import { usePathname } from "next/navigation";
 import FreeCounter from "./FreeCounter";
+import { APP_NAME } from "@/constants";
 
 const montserrat = Montserrat({
   weight: "600",
@@ -70,7 +71,7 @@ interface SidebarProps {
   isPro: boolean;
 }
 
-const Sidebar = ({apiLimitCount, isPro = false}: SidebarProps) => {
+const Sidebar = ({apiLimitCount, isPro }: SidebarProps) => {
   const pathName = usePathname();
   return (
     <div className="space-y-4 py-4 flex flex-col h-full bg-[#111827] text-white">
@@ -80,7 +81,7 @@ const Sidebar = ({apiLimitCount, isPro = false}: SidebarProps) => {
             <Image fill alt="Logo" src="/ai-saas-logo-5.png" />
           </div>
           <h1 className={cn("text-2xl font-bold", montserrat.className)}>
-            AI SaaS
+            {APP_NAME}
           </h1>
         </Link>
         <div className="space-y-1">

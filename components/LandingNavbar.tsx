@@ -7,6 +7,7 @@ import { useAuth } from "@clerk/nextjs";
 import { cn } from "@/lib/utils";
 
 import { Button } from "./ui/button";
+import { APP_NAME } from "@/constants";
 
 const montserrat = Montserrat({
     weight: "600",
@@ -31,7 +32,7 @@ const LandingNavbar = () => {
                 </div>
 
                 <h1 className={cn("text-2xl font-bold text-white", montserrat.className)}>
-            AI SaaS
+            {APP_NAME}
           </h1>
             </Link>
             <div>

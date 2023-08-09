@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { Card } from "@/components/ui/card";
 import { ArrowRight, Code, ImageIcon, MessageSquare, MusicIcon, VideoIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { APP_NAME } from "@/constants";
 
 const tools = [
   {
@@ -51,7 +52,7 @@ const DashboardPage = () => {
   return (
     <div>
       <div className="mb-8 space-y-4">
-        <h2 className="text-2xl md:text-4xl font-bold text-center">AI SaaS</h2>
+        <h2 className="text-2xl md:text-4xl font-bold text-center">{APP_NAME}</h2>
         <p className="text-muted-foreground text-sm font-light md:text-lg text-center">
           A platform that allows you to generate images, videos, music, and code
           using artificial intelligence.

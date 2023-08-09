@@ -5,11 +5,12 @@ import { ClerkProvider } from '@clerk/nextjs'
 import ModalProvider from '@/components/ModalProvider'
 import ToasterProvider from '@/components/ToasterProvider'
 import CrispProvider from '@/components/CrispProvider'
+import { APP_NAME } from '@/constants'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'AI SaaS',
+  title: APP_NAME,
   description: 'AI platform for music, video, text and more...',
 }
 
