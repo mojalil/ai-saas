@@ -34,7 +34,14 @@ const LandingNavbar = () => {
             AI SaaS
           </h1>
             </Link>
+            <div>
+                <Link href={isSignedIn ? "/dashboard" : "/sign-up"}>
+                    <Button variant="outline" className=" rounded-full">
+                        Get Started
+                    </Button>
+                </Link>
 
+            </div>
         </nav>
     );
 
