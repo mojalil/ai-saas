@@ -37,6 +37,12 @@ npm run build
 npm start
 ```
 
+## Database
+
+1. Making changes to the schema ? Run `npx prisma db push` followed by `npx prisma generate`
+2. Check the database with the webui, run `npx prisma studio`
+3. To reset your database you can use `npx prisma migrate database`, `npx prisma generate` , `npx prisma db push`
+
 ## Dependencies
 
 Trifusion AI leverages several libraries and frameworks:
