@@ -18,6 +18,9 @@ Check out [Trifusion AI](https://trifusion-ai.vercel.app/)
 - **Intuitive UI**: A modern and responsive user interface.
 - **No Credit Card Required**: Start generating for free.
 
+![trifusion-og](https://github.com/mojalil/trifusion-ai/assets/10572843/354fbb17-f6c7-4ec8-9359-66c58567306e)
+
+
 ## Getting Started
 
 Clone the repository and install the dependencies:
