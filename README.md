@@ -7,6 +7,10 @@
 
 Trifusion AI is a state-of-the-art solution that uses artificial intelligence to generate content like photos, videos, music, art, code, and text. It enables creators, developers, and artists to produce content at an unparalleled speed.
 
+
+## Link To Live Project
+Check out [Trifusion AI](https://trifusion-ai.vercel.app/)
+
 ## Features
 
 - **Content Generation**: Easily create photos, videos, music, art, code, and text.
