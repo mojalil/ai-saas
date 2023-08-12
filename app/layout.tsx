@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     description: APP_DESCRIPTION,
     images: [
       {
-        url: 'https://ai-saas.vercel.app/ai-saas-logo-5.png',
+        url: 'https://user-images.githubusercontent.com/10572843/260222103-354fbb17-f6c7-4ec8-9359-66c58567306e.png',
         width: 1200,
         height: 630,
         alt: APP_NAME,
